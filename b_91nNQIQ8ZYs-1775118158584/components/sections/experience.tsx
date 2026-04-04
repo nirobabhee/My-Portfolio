@@ -8,7 +8,7 @@ const experiences = [
     company: "The Softking Ltd.",
     location: "Uttara, Dhaka",
     period: "Dec 2021 – Present",
-    duration: "3+ Years",
+    duration: "4+ Years",
     current: true,
     type: "Full-time",
     summary: "Leading development of scalable Laravel applications serving thousands of users globally.",
