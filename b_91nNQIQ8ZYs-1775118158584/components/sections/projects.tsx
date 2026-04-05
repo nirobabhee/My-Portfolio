@@ -94,6 +94,14 @@ const clientProjects = [
     liveUrl: "https://www.mickysliquor.com",
     category: "E-Commerce",
   },
+    {
+    title: "Tow Fast",
+    subtitle: "Ride-Sharing Platform",
+    description: "Fast and safe car towing in Eupore base countries.",
+    tech: ["Laravel", "MySQL","Javascript", "Bootstrap", "CSS","Ajax"],
+    liveUrl: "http://towfast.ro",
+    category: "Ride Sharing",
+  },
 ]
 
 const personalProjects = [
