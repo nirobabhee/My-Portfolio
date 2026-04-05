@@ -161,6 +161,34 @@ const personalProjects = [
     liveUrl: "https://script.viserlab.com/caremate",
     featured: false,
   },
+  {
+    title: "Torylab",
+    description: "Inventory Management System. Tracking Buy,Sales, Buy-Sales Return, Expenses etc",
+    tech: ["Laravel", "MySQL", "Ajax","Booststrap", "CSS"],
+    liveUrl: "https://script.viserlab.com/torylab",
+    featured: false,
+  },
+  {
+    title: "Inspiremme",
+    description: "Buy me a coffee SAAS: Inspiring for creative works",
+    tech: ["Laravel", "MySQL", "Ajax","Booststrap", "CSS"],
+    liveUrl: "https://script.viserlab.com/inspireme",
+    featured: false,
+  },
+  {
+    title: "Theatalab",
+    description: "Ticket Booking Platform as Movie & Events",
+    tech: ["Laravel", "MySQL", "Ajax","Booststrap", "CSS"],
+    liveUrl: "https://script.viserlab.com/theatalab",
+    featured: false,
+  },
+    {
+    title: "Codesole",
+    description: "Digital code/product selling subscription based platform",
+    tech: ["Laravel", "MySQL", "Ajax","Booststrap", "CSS"],
+    liveUrl: "https://script.viserlab.com/codesole",
+    featured: false,
+  },
 ]
 
 const categoryColors: Record<string, string> = {
@@ -277,7 +305,7 @@ export function ProjectsSection() {
                 <Star className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">Personal & Open Source</h3>
+                <h3 className="text-xl font-bold text-foreground">Personal, CodeCanyon Project & Open Source</h3>
                 <p className="text-sm text-muted-foreground">Side projects and experimental work</p>
               </div>
             </div>
