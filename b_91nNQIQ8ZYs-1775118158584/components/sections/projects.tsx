@@ -137,7 +137,7 @@ const personalProjects = [
     title: "SMMLab",
     description: "Social media marketing platform for managing campaigns and tracking analytics.",
     tech: ["Laravel", "MySQL","Javascript", "Bootstrap", "CSS","Ajax"],
-    liveUrl: "#",
+    liveUrl: "https://script.viserlab.com/smmlab",
     featured: false,
   },
   {
@@ -169,7 +169,7 @@ const personalProjects = [
     featured: false,
   },
   {
-    title: "Inspiremme",
+    title: "Inspireme",
     description: "Buy me a coffee SAAS: Inspiring for creative works",
     tech: ["Laravel", "MySQL", "Ajax","Booststrap", "CSS"],
     liveUrl: "https://script.viserlab.com/inspireme",
@@ -306,73 +306,94 @@ export function ProjectsSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground">Personal, CodeCanyon Project & Open Source</h3>
-                <p className="text-sm text-muted-foreground">Side projects and experimental work</p>
+                <p className="text-sm text-muted-foreground">Side projects and production for digital market work</p>
               </div>
             </div>
 
+            {/* Featured Personal */}
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {featuredPersonal.map((project, index) => (
-                <div
+              {featuredPersonal.map((project) => (
+                <Link
                   key={project.title}
-                  className="group relative p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300"
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="p-2 rounded-lg bg-amber-500/10">
-                      <Star className="h-5 w-5 text-amber-500" />
-                    </div>
-                    <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
-                      Featured
-                    </span>
-                  </div>
+                  <div className="relative p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
 
-                  <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h4>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
+                    {/* External icon */}
+                    <ExternalLink className="h-4 w-4 absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition" />
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2.5 py-1 text-xs font-mono rounded-full bg-secondary text-secondary-foreground"
-                      >
-                        {tech}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="p-2 rounded-lg bg-amber-500/10">
+                        <Star className="h-5 w-5 text-amber-500" />
+                      </div>
+                      <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
+                        Featured
                       </span>
-                    ))}
+                    </div>
+
+                    <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h4>
+
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2.5 py-1 text-xs font-mono rounded-full bg-secondary text-secondary-foreground"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 
             {/* Other Personal Projects */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {otherPersonal.map((project) => (
-                <div
+                <Link
                   key={project.title}
-                  className="group p-4 rounded-xl border border-border bg-card hover:border-primary/50 hover:-translate-y-1 transition-all duration-300"
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
                 >
-                  <h5 className="font-bold text-foreground group-hover:text-primary transition-colors mb-2">
-                    {project.title}
-                  </h5>
-                  <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1">
-                    {project.tech.slice(0, 2).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-0.5 text-xs font-mono rounded bg-muted text-muted-foreground"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  <div className="relative p-4 rounded-xl border border-border bg-card hover:border-primary/50 hover:-translate-y-1 transition-all duration-300">
+
+                    {/* External icon */}
+                    <ExternalLink className="h-4 w-4 absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition" />
+
+                    <h5 className="font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                      {project.title}
+                    </h5>
+
+                    <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-1">
+                      {project.tech.slice(0, 2).map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-0.5 text-xs font-mono rounded bg-muted text-muted-foreground"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
-          </div>
 
           {/* GitHub Link */}
           <div className="text-center">
