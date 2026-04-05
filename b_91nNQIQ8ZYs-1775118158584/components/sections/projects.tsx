@@ -1,10 +1,8 @@
 "use client"
 
-import { ExternalLink, Github, Star } from "lucide-react"
-import Link from "next/link"
+import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-// ✅ DATA (IMPORTANT - this was missing or misused)
 const personalProjects = [
   {
     title: "RateLab",
@@ -41,23 +39,24 @@ export default function ProjectsSection() {
   const others = personalProjects.filter(p => !p.featured)
 
   return (
-    <section className="py-20">
+    <section className="py-20 relative z-10">
       <div className="max-w-6xl mx-auto px-4">
 
         <h2 className="text-2xl font-bold mb-10">
           Personal Projects
         </h2>
 
-        {/* 🔥 FEATURED */}
+        {/* FEATURED */}
         <div className="grid md:grid-cols-2 gap-6 mb-10">
           {featured.map((project) => (
-            <Link
+            <a
               key={project.title}
               href={project.liveUrl}
               target="_blank"
-              className="group block"
+              rel="noopener noreferrer"
+              className="group block relative z-20"
             >
-              <div className="p-6 border rounded-xl hover:border-primary hover:-translate-y-1 transition">
+              <div className="p-6 border rounded-xl hover:border-primary hover:-translate-y-1 transition cursor-pointer">
 
                 <ExternalLink className="h-4 w-4 float-right opacity-0 group-hover:opacity-100" />
 
@@ -78,20 +77,21 @@ export default function ProjectsSection() {
                 </div>
 
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
-        {/* 🔥 OTHER */}
+        {/* OTHER */}
         <div className="grid md:grid-cols-3 gap-4">
           {others.map((project) => (
-            <Link
+            <a
               key={project.title}
               href={project.liveUrl}
               target="_blank"
-              className="group block"
+              rel="noopener noreferrer"
+              className="group block relative z-20"
             >
-              <div className="p-4 border rounded-lg hover:border-primary hover:-translate-y-1 transition">
+              <div className="p-4 border rounded-lg hover:border-primary hover:-translate-y-1 transition cursor-pointer">
 
                 <ExternalLink className="h-4 w-4 float-right opacity-0 group-hover:opacity-100" />
 
@@ -104,17 +104,17 @@ export default function ProjectsSection() {
                 </p>
 
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
         {/* GitHub */}
         <div className="text-center mt-10">
           <Button asChild>
-            <Link href="https://github.com/nirobabhee" target="_blank">
+            <a href="https://github.com/nirobabhee" target="_blank">
               <Github className="mr-2 h-4 w-4" />
               GitHub
-            </Link>
+            </a>
           </Button>
         </div>
 
