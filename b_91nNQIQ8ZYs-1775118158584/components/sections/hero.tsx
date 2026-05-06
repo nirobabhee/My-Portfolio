@@ -57,7 +57,7 @@ export function HeroSection() {
                     View Projects
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="gap-2">
+                <Button asChild variant="outline" size="lg" className="gap-2 text-foreground hover:text-primary">
                   <a href="/cv.pdf" download>
                     <Download className="h-4 w-4" />
                     Download CV
