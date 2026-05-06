@@ -8,7 +8,7 @@ const skillCategories = [
     title: "Backend",
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
-    skills: ["Laravel", "PHP", "CodeIgniter", "REST API", "Sanctum", "Redis", "Livewire"],
+    skills: ["Laravel", "PHP", "CodeIgniter", "REST API", "Sanctum", "Redis"],
   },
   {
     icon: Layout,
@@ -22,28 +22,28 @@ const skillCategories = [
     title: "Database",
     color: "text-amber-500",
     bgColor: "bg-amber-500/10",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "SQL", "Database Design", "Query Optimization", "Redis", "SQLite"],
+    skills: ["MySQL", "PostgreSQL", "SQL", "Database Design", "Query Optimization", "Redis", "SQLite"],
   },
   {
     icon: FileCode,
     title: "Database Tools",
     color: "text-orange-500",
     bgColor: "bg-orange-500/10",
-    skills: ["phpMyAdmin", "MySQL Workbench", "TablePlus", "DBeaver", "MongoDB Compass", "Adminer", "HeidiSQL"],
+    skills: ["phpMyAdmin", "MySQL Workbench", "TablePlus", "Adminer"],
   },
   {
     icon: Cloud,
     title: "DevOps & CI/CD",
     color: "text-cyan-500",
     bgColor: "bg-cyan-500/10",
-    skills: ["GitHub Actions", "GitLab CI", "Nginx", "Apache", "Bitbucket Pipelines"],
+    skills: ["GitHub Actions", "GitLab CI", "Nginx", "Apache"],
   },
   {
     icon: HardDrive,
     title: "Server & Hosting",
     color: "text-purple-500",
     bgColor: "bg-purple-500/10",
-    skills: [ "CentOS", "cPanel", "WHM", "VPS Management", "AWS EC2", "DigitalOcean"],
+    skills: ["cPanel", "WHM", "VPS Management", "AWS EC2"],
   },
   {
     icon: Upload,
@@ -57,14 +57,14 @@ const skillCategories = [
     title: "Tools",
     color: "text-indigo-500",
     bgColor: "bg-indigo-500/10",
-    skills: ["Git", "GitHub", "Postman", "Composer", "NPM", "VS Code", "Trello", "Jira"],
+    skills: ["Git", "GitHub", "Postman", "Composer", "NPM", "VS Code", "Trello","Antigravity","PhpStorm"],
   },
   {
     icon: Sparkles,
     title: "AI Tools",
     color: "text-pink-500",
     bgColor: "bg-pink-500/10",
-    skills: ["ChatGPT", "GitHub Copilot", "Claude", "Gemini", "Cursor", "Black Box"],
+    skills: ["ChatGPT", "GitHub Copilot", "Claude", "Gemini", "Cursor", "Black Box","DeepSeek"],
   },
 ]
 
